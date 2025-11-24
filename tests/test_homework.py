@@ -21,7 +21,7 @@ def test_homework():
 
     try:
         subprocess.run(
-            ["python3", "-m", "homework", "data/input", "data/output"],
+            ["py", "-m", "homework", "data/input", "data/output"],
             check=True,
         )
     except subprocess.CalledProcessError as e:
@@ -30,7 +30,7 @@ def test_homework():
     if not os.path.exists("data/output/"):
         raise Exception("'data/output/' directory does not exist")
 
-    results_file = "data/output/wordcount.tsv"
+    results_file = "data/output/results.tsv"
     if not os.path.exists(results_file):
         raise Exception(f"'{results_file}' file does not exist")
 
