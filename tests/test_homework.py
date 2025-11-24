@@ -14,7 +14,7 @@ def test_homework():
         "homework/src/_internals/preprocess_lines.py",
         "homework/src/_internals/read_all_lines.py",
         "homework/src/_internals/split_into_words.py",
-        "homework/src/_internals/write_count_words.py",
+        "homework/src/_internals/write_word_counts.py",
     ]:
         if not os.path.exists(path):
             raise Exception(f"'{path}' directory does not exist")
@@ -30,7 +30,7 @@ def test_homework():
     if not os.path.exists("data/output/"):
         raise Exception("'data/output/' directory does not exist")
 
-    results_file = "data/output/results.tsv"
+    results_file = "data/output/wordcount.tsv"
     if not os.path.exists(results_file):
         raise Exception(f"'{results_file}' file does not exist")
 
