@@ -4,3 +4,5 @@ def split_into_words(all_lines):
     words = []
     for line in all_lines:
         words.extend(w.lower().strip(",.!?") for w in line.split())
+
+    return words
